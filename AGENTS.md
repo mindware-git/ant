@@ -1,6 +1,6 @@
 # AGENTS.md
 
-## Ant
+## api
 uv for control whole project
 
 ### commands
@@ -9,7 +9,7 @@ uv for control whole project
 ### Python code style
 - uv format
 
-## Web (web directory)
+## web
 Nextjs project
 
 ### Setup commands
