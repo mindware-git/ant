@@ -3,6 +3,9 @@
 ## Ant
 uv for control whole project
 
+### commands
+- dev server: uv run fastapi dev
+
 ### Python code style
 - uv format
 
