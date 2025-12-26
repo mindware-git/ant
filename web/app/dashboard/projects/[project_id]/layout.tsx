@@ -1,18 +1,18 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { ReactNode } from "react";
 
-export default function ProjectLayout({
+export default async function ProjectLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
-  params: {
-    project_id: string;
-  };
+  children: ReactNode;
+  params: Promise<{ project_id: string }>;
 }) {
+  const { project_id } = await params;
   return (
     <SidebarProvider>
-      <AppSidebar projectId={params.project_id} />
+      <AppSidebar projectId={project_id} />
       <main className="flex flex-1 flex-col">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />

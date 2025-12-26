@@ -7,7 +7,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function ProjectPage() {
+export default function ProjectPage({
+  params,
+}: {
+  params: { project_id: string };
+}) {
   return (
     <div className="space-y-8">
       {/* Demo Welcome Section */}
@@ -60,9 +64,7 @@ export default function ProjectPage() {
         <Card>
           <CardHeader>
             <CardTitle>📊 성능 분석</CardTitle>
-            <CardDescription>
-              에이전트의 성능 지표를 확인하세요
-            </CardDescription>
+            <CardDescription>에이전트의 성능 지표를 확인하세요</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
