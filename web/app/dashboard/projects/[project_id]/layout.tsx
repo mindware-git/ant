@@ -1,15 +1,15 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
-import { ReactNode } from "react";
+import { ReactNode, use } from "react";
 
-export default async function ProjectLayout({
+export default function ProjectLayout({
   children,
   params,
 }: {
   children: ReactNode;
   params: Promise<{ project_id: string }>;
 }) {
-  const { project_id } = await params;
+  const { project_id } = use(params);
   return (
     <SidebarProvider>
       <AppSidebar projectId={project_id} />

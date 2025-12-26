@@ -41,7 +41,7 @@ export function AppSidebar({ projectId }: AppSidebarProps) {
     {
       title: "Rule 관리",
       icon: GitBranch,
-      url: `/dashboard/projects/${projectId}/rules`,
+      url: `/dashboard/projects/${projectId}/rule`,
     },
     {
       title: "Memory 설정",
@@ -49,9 +49,9 @@ export function AppSidebar({ projectId }: AppSidebarProps) {
       url: `/dashboard/projects/${projectId}/memory`,
     },
     {
-      title: "챗봇 테스트",
+      title: "테스트 환경",
       icon: MessageSquare,
-      url: `/dashboard/projects/${projectId}/chat`,
+      url: `/dashboard/projects/${projectId}/test`,
     },
     {
       title: "성능 분석",
